@@ -1,4 +1,4 @@
-const sql = require('../config/db');
+const sql = require('../config/Db.js');
 const user = {};
 
 user.Register = (UserData) => {
