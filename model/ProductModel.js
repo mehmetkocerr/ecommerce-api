@@ -1,4 +1,4 @@
-const sql = require('../config/db');
+const sql = require('../config/Db.js');
 
 exports.All = () => {
 	return new Promise((resolve, reject) => {
