@@ -19,12 +19,7 @@ if (dev) {
 }
 //production mysql db connection
 else {
-	dbConfig = {
-		host: process.env.PROD_HOST,
-		user: process.env.PROD_USER,
-		password: process.env.PROD_PASSWORD,
-		database: process.env.PROD_DATABASE,
-	};
+	dbConfig = process.env.CLEARDB_DATABASE_URL;
 }
 var connection = mysql.createConnection(dbConfig);
 connection.connect((err) => {
