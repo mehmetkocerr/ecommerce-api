@@ -4,6 +4,7 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const port = process.env.PORT || 5000;
 
+app.use(cors());
 app.use(function (req, res, next) {
 	res.header('Access-Control-Allow-Origin', '*');
 	res.header(
@@ -12,7 +13,6 @@ app.use(function (req, res, next) {
 	);
 	next();
 });
-app.use(cors());
 
 //Import Routes
 const authRoutes = require('./routes/auth');
